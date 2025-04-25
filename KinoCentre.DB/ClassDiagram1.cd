@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KinoCentre.DB.Entities.Movie">
+    <Position X="1.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAACCAKgEAAICIQAAAAAAAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>Entities\Movie.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sessions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KinoCentre.DB.Entities.Seat">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Seat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinoCentre.DB.Entities.Session">
+    <Position X="3.75" Y="7.25" Width="1.5" />
+    <AssociationLine Name="RoomSize" Type="KinoCentre.DB.Entities.RoomSize" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="8.724" />
+        <Point X="4.5" Y="9.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAAAAAAAAAAQAQAAAAAAAAACAIAAAAA=</HashCode>
+      <FileName>Entities\Session.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoomSize" />
+      <Property Name="Movie" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KinoCentre.DB.Entities.Ticket">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAQAEAAAAQAAIAAAAAABAAAAAIAAAAAA=</HashCode>
+      <FileName>Entities\Ticket.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Seat" />
+      <Property Name="Session" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KinoCentre.DB.KinoDbContext">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAEAAAACAAAAEAEAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>KinoDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repository&lt;T&gt;">
+    <Position X="6.5" Y="2.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Repository&lt;T&gt;.SessionWithMovie">
+        <TypeIdentifier>
+          <NewMemberFileName>Repository.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEABEAACAAABAAAAAAAIAAAAAAAAAgAAAAAAEAAIIA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitOfWork" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACIABAAAAgAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.DbContext" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Enum Name="KinoCentre.DB.Entities.RoomSize">
+    <Position X="3.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIABgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Session.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
