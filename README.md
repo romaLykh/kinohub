@@ -60,3 +60,38 @@ KinoCentre is a ticket booking API for a cinema. It allows users to purchase tic
     "originalPrice": 0.0,
     "finalPrice": 0.0
   }
+
+## How to Run the Project
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/MaxShevchenko23/KinoCentre.git
+   cd KinoCentre
+   ```
+
+2. **Install Dependencies**:
+   Ensure you have the following installed:
+   - .NET SDK (version 6.0 or higher)
+   - MongoDB (running locally or accessible remotely)
+
+3. **Configure the Application**:
+   - Update the MongoDB connection string in the `appsettings.json` file.
+   - Set up email credentials in `KinoCentre.API/EmailSender.cs`:
+     ```csharp
+     smtpClient.Authenticate("your-email@gmail.com", "your-app-password");
+     ```
+
+4. **Run MongoDB**:
+   Start the MongoDB server locally or ensure the remote server is accessible.
+
+5. **Run the Application**:
+   Open the project in JetBrains Rider and:
+   - Build the solution.
+   - Run the `KinoCentre.API` project.
+
+6. **Test the API**:
+   Use tools like Postman or cURL to test the endpoints. The API will be available at `http://localhost:5000` (or the configured port).
+
+7. **Optional**:
+   - Use Swagger (if enabled) to explore and test the API at `http://localhost:5000/swagger`.
+   - Ensure the `Tickets` directory exists in the project root for PDF generation.
